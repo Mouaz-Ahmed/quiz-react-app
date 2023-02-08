@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {useState}  from 'react';
+import Quiz from './components/Quiz';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [quiz, setQuiz] = useState(false);
+ 
+  if(quiz === false){
+    return (
+      <div className="App">
+       
+        <h1 className='h1'>Computer Science Quiz</h1>
+        <button onClick={()=>setQuiz(true)} className="btn" >Start the Quiz</button>
+      </div>
+    )
+  }
+  if(quiz){
+   return <Quiz />
+  }
+  
 }
+
 
 export default App;

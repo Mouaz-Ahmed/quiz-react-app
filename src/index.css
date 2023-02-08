@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Quiz-page{
+  width: 70%;
+  background-color: rgb(228, 217, 217);
+  margin: 10px auto;
+  padding: 40px;
+}
